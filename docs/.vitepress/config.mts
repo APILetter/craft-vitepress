@@ -1,4 +1,14 @@
 import { defineConfig } from 'vitepress'
+import { useSidebar } from 'vitepress-openapi'
+import spec from '../spec.json'
+
+const sidebar = useSidebar({ 
+  spec,
+  linkPrefix: '/references/',
+})
+
+console.log(JSON.stringify(sidebar.generateSidebarGroups()))
+
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -14,7 +24,8 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '快速开始', link: '/tutorials/quick-start' },
-      { text: '深度定制', link: '/guide/index' }
+      { text: '深度定制', link: '/guide/index' },
+      {text:'API 文档',link:'/references/get-get'}
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/APILetter/craft-vitepress' }
@@ -27,6 +38,7 @@ export default defineConfig({
       pattern: 'https://github.com/APILetter/craft-vitepress/edit/main/docs/:path'
     },
     sidebar:{
+      '/references/':sidebar.generateSidebarGroups(),
       '/guide/':[
         {
           text: '深度定制',
