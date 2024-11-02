@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Craft Content Framework",
   description: "Craft Content Framework VitePress",
+  lastUpdated:true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
