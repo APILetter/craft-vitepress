@@ -1,0 +1,1191 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "httpbin-rs",
+    "description": "HTTP Request & Response Service pretty like [httpbin](http://httpbin.org) but powered by Rust",
+    "version": "0.1.0",
+    "contact": {
+      "name": "duskmoon (developer)",
+      "url": "https://duskmoon314.com",
+      "email": "kp.campbell.he@duskmoon314.com"
+    },
+    "license": {
+      "name": "MIT OR Apache-2.0"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://httpbin.rs",
+      "description": "poem-openapi implementation"
+    },
+    {
+      "url": "https://axum.httpbin.rs",
+      "description": "axum implementation"
+    },
+    {
+      "url": "https://actix.httpbin.rs",
+      "description": "actix implementation"
+    },
+    {
+      "url": "https://salvo.httpbin.rs",
+      "description": "salvo implementation"
+    },
+    {
+      "url": "https://rocket.httpbin.rs",
+      "description": "rocket implementation"
+    },
+    {
+      "url": "https://poem.httpbin.rs",
+      "description": "poem implementation"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Anything",
+      "description": "Returns anything that is passed to request"
+    },
+    {
+      "name": "Data",
+      "description": "Generates useful data"
+    },
+    {
+      "name": "HTTP Methods",
+      "description": "Testing different HTTP verbs"
+    },
+    {
+      "name": "Request Inspection",
+      "description": "Inspect the request data"
+    }
+  ],
+  "paths": {
+    "/get": {
+      "get": {
+        "tags": [
+          "HTTP Methods"
+        ],
+        "summary": "The request's GET parameters",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Http"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/post": {
+      "post": {
+        "tags": [
+          "HTTP Methods"
+        ],
+        "summary": "The request's POST parameters",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Http"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/put": {
+      "put": {
+        "tags": [
+          "HTTP Methods"
+        ],
+        "summary": "The request's PUT parameters",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Http"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/delete": {
+      "delete": {
+        "tags": [
+          "HTTP Methods"
+        ],
+        "summary": "The request's DELETE parameters",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Http"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/patch": {
+      "patch": {
+        "tags": [
+          "HTTP Methods"
+        ],
+        "summary": "The request's PATCH parameters",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Http"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/anything": {
+      "get": {
+        "tags": [
+          "Anything"
+        ],
+        "summary": "Returns anything passed in request data.",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Http"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Anything"
+        ],
+        "summary": "Returns anything passed in request data.",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Http"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Anything"
+        ],
+        "summary": "Returns anything passed in request data.",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Http"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Anything"
+        ],
+        "summary": "Returns anything passed in request data.",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Http"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Anything"
+        ],
+        "summary": "Returns anything passed in request data.",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Http"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/anything/*anything": {
+      "get": {
+        "tags": [
+          "Anything"
+        ],
+        "summary": "Returns anything passed in request data.",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Http"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Anything"
+        ],
+        "summary": "Returns anything passed in request data.",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Http"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Anything"
+        ],
+        "summary": "Returns anything passed in request data.",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Http"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Anything"
+        ],
+        "summary": "Returns anything passed in request data.",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Http"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Anything"
+        ],
+        "summary": "Returns anything passed in request data.",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Http"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/headers": {
+      "get": {
+        "tags": [
+          "Request Inspection"
+        ],
+        "summary": "Return the incoming request's HTTP headers.",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Headers"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ip": {
+      "get": {
+        "tags": [
+          "Request Inspection"
+        ],
+        "summary": "Return the incoming request's IP address.",
+        "responses": {
+          "200": {
+            "description": "The incoming request's IP address",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ip"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Could not determine the IP address through headers and socket address",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user-agent": {
+      "get": {
+        "tags": [
+          "Request Inspection"
+        ],
+        "summary": "Return the incoming request's User-Agent header.",
+        "responses": {
+          "200": {
+            "description": "The incoming request's User-Agent header",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserAgent"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The incoming request does not have a User-Agent header",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/base64/encode/{engine}": {
+      "post": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "Encode data to a base64 string",
+        "parameters": [
+          {
+            "name": "engine",
+            "schema": {
+              "$ref": "#/components/schemas/Base64Engine"
+            },
+            "in": "path",
+            "description": "Base64 engines for encoding and decoding\n\n`bcrypt` `binhex` `crypt` `imap-mutf7` are not using padding\n\nThe `custom` engine allows you to specify your own alphabet and padding",
+            "required": true,
+            "deprecated": false,
+            "explode": true
+          },
+          {
+            "name": "alphabet",
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "description": "The alphabet to use for encoding",
+            "required": false,
+            "deprecated": false,
+            "explode": true
+          },
+          {
+            "name": "pad",
+            "schema": {
+              "type": "boolean"
+            },
+            "in": "query",
+            "description": "Whether to use padding",
+            "required": false,
+            "deprecated": false,
+            "explode": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            },
+            "text/plain; charset=utf-8": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The encoded or decoded data",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "headers": {
+              "CONTENT-TYPE": {
+                "description": "Content-Type is `application/octet-stream` by default and is set to\nthe actual type inferred by [infer](https://crates.io/crates/infer)",
+                "required": true,
+                "deprecated": false,
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/base64/decode/{engine}": {
+      "post": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "Decode data from a base64 string",
+        "parameters": [
+          {
+            "name": "engine",
+            "schema": {
+              "$ref": "#/components/schemas/Base64Engine"
+            },
+            "in": "path",
+            "description": "Base64 engines for encoding and decoding\n\n`bcrypt` `binhex` `crypt` `imap-mutf7` are not using padding\n\nThe `custom` engine allows you to specify your own alphabet and padding",
+            "required": true,
+            "deprecated": false,
+            "explode": true
+          },
+          {
+            "name": "alphabet",
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "description": "The alphabet to use for decoding",
+            "required": false,
+            "deprecated": false,
+            "explode": true
+          },
+          {
+            "name": "pad",
+            "schema": {
+              "type": "boolean"
+            },
+            "in": "query",
+            "description": "Whether to use padding",
+            "required": false,
+            "deprecated": false,
+            "explode": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "text/plain; charset=utf-8": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The encoded or decoded data",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "headers": {
+              "CONTENT-TYPE": {
+                "description": "Content-Type is `application/octet-stream` by default and is set to\nthe actual type inferred by [infer](https://crates.io/crates/infer)",
+                "required": true,
+                "deprecated": false,
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/uuid/v1": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "Generate a v1 UUID",
+        "parameters": [
+          {
+            "name": "timestamp",
+            "schema": {
+              "type": "integer",
+              "format": "uint64"
+            },
+            "in": "query",
+            "description": "An optional timestamp to use for the UUID. If not provided, the current time will be used.",
+            "required": false,
+            "deprecated": false,
+            "explode": true
+          },
+          {
+            "name": "counter",
+            "schema": {
+              "type": "integer",
+              "format": "uint16"
+            },
+            "in": "query",
+            "description": "An optional counter to use for the UUID. If not provided, 0 will be used.",
+            "required": false,
+            "deprecated": false,
+            "explode": true
+          },
+          {
+            "name": "node_id",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "uint8"
+              }
+            },
+            "in": "query",
+            "description": "The node ID to use for the UUID. The length must be 6.",
+            "required": true,
+            "deprecated": false,
+            "explode": false
+          },
+          {
+            "name": "format",
+            "schema": {
+              "$ref": "#/components/schemas/UuidFormat"
+            },
+            "in": "query",
+            "description": "An optional format to use for the UUID. If not provided, the default format (hyphenated) will be used.",
+            "required": false,
+            "deprecated": false,
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The generated UUID",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/uuid/v3": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "Generate a v3 UUID",
+        "parameters": [
+          {
+            "name": "namespace",
+            "schema": {
+              "type": "string",
+              "title": "The namespace to use for the UUID",
+              "description": "The following namespaces are supported:\n\n- `dns` - 6ba7b810-9dad-11d1-80b4-00c04fd430c8\n- `url` - 6ba7b811-9dad-11d1-80b4-00c04fd430c8\n- `oid` - 6ba7b812-9dad-11d1-80b4-00c04fd430c8\n- `x500` - 6ba7b814-9dad-11d1-80b4-00c04fd430c8\n- custom - any UUID in string form"
+            },
+            "in": "query",
+            "description": "The namespace to use for the UUID.\n\nThe following namespaces are supported:\n\n- `dns` - 6ba7b810-9dad-11d1-80b4-00c04fd430c8\n- `url` - 6ba7b811-9dad-11d1-80b4-00c04fd430c8\n- `oid` - 6ba7b812-9dad-11d1-80b4-00c04fd430c8\n- `x500` - 6ba7b814-9dad-11d1-80b4-00c04fd430c8\n- custom - any UUID in string form",
+            "required": true,
+            "deprecated": false,
+            "explode": true
+          },
+          {
+            "name": "name",
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "description": "The name to use for the UUID.",
+            "required": true,
+            "deprecated": false,
+            "explode": true
+          },
+          {
+            "name": "format",
+            "schema": {
+              "$ref": "#/components/schemas/UuidFormat"
+            },
+            "in": "query",
+            "description": "An optional format to use for the UUID. If not provided, the default format (hyphenated) will be used.",
+            "required": false,
+            "deprecated": false,
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The generated UUID",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/uuid/v4": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "Generate a v4 UUID",
+        "parameters": [
+          {
+            "name": "format",
+            "schema": {
+              "$ref": "#/components/schemas/UuidFormat"
+            },
+            "in": "query",
+            "description": "An optional format to use for the UUID. If not provided, the default format (hyphenated) will be used.",
+            "required": false,
+            "deprecated": false,
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The generated UUID",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/uuid/v5": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "Generate a v5 UUID",
+        "parameters": [
+          {
+            "name": "namespace",
+            "schema": {
+              "type": "string",
+              "title": "The namespace to use for the UUID",
+              "description": "The following namespaces are supported:\n\n- `dns` - 6ba7b810-9dad-11d1-80b4-00c04fd430c8\n- `url` - 6ba7b811-9dad-11d1-80b4-00c04fd430c8\n- `oid` - 6ba7b812-9dad-11d1-80b4-00c04fd430c8\n- `x500` - 6ba7b814-9dad-11d1-80b4-00c04fd430c8\n- custom - any UUID in string form"
+            },
+            "in": "query",
+            "description": "The namespace to use for the UUID\n\nThe following namespaces are supported:\n\n- `dns` - 6ba7b810-9dad-11d1-80b4-00c04fd430c8\n- `url` - 6ba7b811-9dad-11d1-80b4-00c04fd430c8\n- `oid` - 6ba7b812-9dad-11d1-80b4-00c04fd430c8\n- `x500` - 6ba7b814-9dad-11d1-80b4-00c04fd430c8\n- custom - any UUID in string form",
+            "required": true,
+            "deprecated": false,
+            "explode": true
+          },
+          {
+            "name": "name",
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "description": "The name to use for the UUID.",
+            "required": true,
+            "deprecated": false,
+            "explode": true
+          },
+          {
+            "name": "format",
+            "schema": {
+              "$ref": "#/components/schemas/UuidFormat"
+            },
+            "in": "query",
+            "description": "An optional format to use for the UUID. If not provided, the default format (hyphenated) will be used.",
+            "required": false,
+            "deprecated": false,
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The generated UUID",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/uuid/v6": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "Generate a v6 UUID",
+        "parameters": [
+          {
+            "name": "timestamp",
+            "schema": {
+              "type": "integer",
+              "format": "uint64"
+            },
+            "in": "query",
+            "description": "An optional timestamp to use for the UUID. If not provided, the current time will be used.",
+            "required": false,
+            "deprecated": false,
+            "explode": true
+          },
+          {
+            "name": "counter",
+            "schema": {
+              "type": "integer",
+              "format": "uint16"
+            },
+            "in": "query",
+            "description": "An optional counter to use for the UUID. If not provided, 0 will be used.",
+            "required": false,
+            "deprecated": false,
+            "explode": true
+          },
+          {
+            "name": "node_id",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "uint8"
+              }
+            },
+            "in": "query",
+            "description": "The node ID to use for the UUID. The length must be 6.",
+            "required": true,
+            "deprecated": false,
+            "explode": false
+          },
+          {
+            "name": "format",
+            "schema": {
+              "$ref": "#/components/schemas/UuidFormat"
+            },
+            "in": "query",
+            "description": "An optional format to use for the UUID. If not provided, the default format (hyphenated) will be used.",
+            "required": false,
+            "deprecated": false,
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The generated UUID",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/uuid/v7": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "Generate a v7 UUID",
+        "parameters": [
+          {
+            "name": "timestamp",
+            "schema": {
+              "type": "integer",
+              "format": "uint64"
+            },
+            "in": "query",
+            "description": "An optional timestamp to use for the UUID. If not provided, the current time will be used.",
+            "required": false,
+            "deprecated": false,
+            "explode": true
+          },
+          {
+            "name": "counter",
+            "schema": {
+              "type": "integer",
+              "format": "uint16"
+            },
+            "in": "query",
+            "description": "An optional counter to use for the UUID. If not provided, 0 will be used.",
+            "required": false,
+            "deprecated": false,
+            "explode": true
+          },
+          {
+            "name": "format",
+            "schema": {
+              "$ref": "#/components/schemas/UuidFormat"
+            },
+            "in": "query",
+            "description": "An optional format to use for the UUID. If not provided, the default format (hyphenated) will be used.",
+            "required": false,
+            "deprecated": false,
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The generated UUID",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/uuid/v8": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "Generate a v8 UUID",
+        "parameters": [
+          {
+            "name": "buf",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "uint8"
+              }
+            },
+            "in": "query",
+            "description": "The buffer to use for the UUID. The length must be 16.",
+            "required": true,
+            "deprecated": false,
+            "explode": false
+          },
+          {
+            "name": "format",
+            "schema": {
+              "$ref": "#/components/schemas/UuidFormat"
+            },
+            "in": "query",
+            "description": "An optional format to use for the UUID. If not provided, the default format (hyphenated) will be used.",
+            "required": false,
+            "deprecated": false,
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The generated UUID",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "text/plain; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Base64Engine": {
+        "type": "string",
+        "description": "Base64 engines for encoding and decoding\n\n`bcrypt` `binhex` `crypt` `imap-mutf7` are not using padding\n\nThe `custom` engine allows you to specify your own alphabet and padding",
+        "enum": [
+          "standard",
+          "standard_no_pad",
+          "url_safe",
+          "url_safe_no_pad",
+          "bcrypt",
+          "bin_hex",
+          "crypt",
+          "imap_mutf7",
+          "custom"
+        ]
+      },
+      "Headers": {
+        "type": "object",
+        "required": [
+          "headers"
+        ],
+        "properties": {
+          "headers": {
+            "type": "object",
+            "description": "The incoming request's HTTP headers",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "example": {
+          "headers": {
+            "accept": "*/*",
+            "host": "httpbin.rs",
+            "user-agent": "curl/7.86.0"
+          }
+        }
+      },
+      "Http": {
+        "type": "object",
+        "required": [
+          "method",
+          "uri",
+          "headers",
+          "body_string"
+        ],
+        "properties": {
+          "method": {
+            "type": "string"
+          },
+          "uri": {
+            "type": "string"
+          },
+          "headers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "origin": {
+            "type": "string"
+          },
+          "query": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "body_string": {
+            "type": "string"
+          },
+          "json": {}
+        }
+      },
+      "Ip": {
+        "type": "object",
+        "required": [
+          "origin"
+        ],
+        "properties": {
+          "origin": {
+            "type": "string",
+            "description": "The incoming request's IP address"
+          }
+        },
+        "example": {
+          "origin": "1.2.3.4"
+        }
+      },
+      "UserAgent": {
+        "type": "object",
+        "required": [
+          "user_agent"
+        ],
+        "properties": {
+          "user_agent": {
+            "type": "string",
+            "description": "The incoming request's User-Agent header"
+          }
+        },
+        "example": {
+          "user_agent": "curl/7.86.0"
+        }
+      },
+      "UuidFormat": {
+        "type": "string",
+        "description": "The format to use for the UUID\n\nThe default format is `hyphenated`.\n\nThe following formats are supported:\n\n- `hyphenated` - 8-4-4-4-12\n- `simple` - 32 hex digits\n- `urn` - urn:uuid:8-4-4-4-12\n- `braced` - {8-4-4-4-12}",
+        "enum": [
+          "hyphenated",
+          "simple",
+          "urn",
+          "braced"
+        ]
+      }
+    }
+  },
+  "externalDocs": {
+    "url": "https://github.com/duskmoon314/httpbin-rs",
+    "description": "Source code (GitHub)"
+  }
+}
