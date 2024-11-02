@@ -11,7 +11,7 @@ hero:
       link: /tutorials/quick-start
     - theme: alt
       text: Comapre With ...
-      link: /compare-with
+      link: /compare-with/index
 
 features:
   - title: 提供模板
