@@ -8,10 +8,10 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /markdown-examples
+      link: /tutorials/quick-start
     - theme: alt
       text: Comapre With ...
-      link: /api-examples
+      link: /compare-with
 
 features:
   - title: 提供模板
